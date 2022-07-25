@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta : hsl(300, 69%, 71%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:var(--Violet) ;
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 50px auto;
+}
+
+.container{
+    width: 90%;
+    margin: 30px auto;
+}
+
+.text{
+    margin: 50px 10px 20px 50px;
+}
+.text h1{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6em;
+    width: 80%;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+.text p{
+    line-height: 1.5em;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: left;
+}
+
+.reg-btn{
+    margin-top: 40px;
+}
+
+.reg-btn a{
+    background-color: white;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    color: var(--Violet);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px 70px 10px 70px;
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.reg-btn a:hover{
+    color: white;
+    background-color: var(--Soft-Magenta);
+    border: 1px solid var(--Soft-Magenta);
+}
+
+.icons{
+   text-align: right;
+   font-size: 1.5em;
+   
+}
+
+#facebook{
+    padding: 10px 15px;
+}
+
+.icons i{
+    height: 30%;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.icons i:hover{
+    color: var(--Soft-Magenta);
+    border: 1px solid var(--Soft-Magenta);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(0, 0%, 100%); }
+
+
+@media(max-width:375px){
+    
+    .container{
+        background: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text, .icons {
+        text-align: center;
+    }
+    .text p{
+        text-align: center;
+        margin: 5px 10px ;
+    }
+}
